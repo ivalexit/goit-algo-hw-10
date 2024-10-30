@@ -6,14 +6,13 @@ import matplotlib.pyplot as plt
 def f(x):
     return np.sin(x)
 
-
 a = 0      # нижня межа
 b = np.pi  # верхня межа 
 
 # Обчислення інтегралу за допомогою методу Монте-Карло
 def monte_carlo_integration(func, a, b, num_points=10000):
     # Генерація випадкових точок у прямокутнику [a, b] x [0, max_y]
-    max_y = 1  # Максимум для sin(x) в межах [0, pi] — це 1
+    max_y = 1  # Максимум для sin(x) в межах [0, pi]
     random_x = np.random.uniform(a, b, num_points)
     random_y = np.random.uniform(0, max_y, num_points)
     
